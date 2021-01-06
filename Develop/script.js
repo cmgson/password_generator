@@ -4,13 +4,24 @@ var lower = "abcdefghijklmnopqrstuvwxyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var special = "!@#$%^&*-_=+`~?\|";
-var pwlength = '';
+var charset = "";
+var pwlength = "";
+
+
 //initialize pwlength then set while checking validity
+
 while (pwlength < 8 || pwlength > 128 || isNaN (pwlength) ){
   pwlength = prompt ("Please pick a length between 8 and 128");
 }
 alert("The length of your password will be " + pwlength + " characters long!");
-
+// send user confirmation on lower case and add it to pw character set
+var lowerConfirm = confirm("would you like to add lower case to your password")
+  if (lowerConfirm) {
+    alert("no problem!");
+    charset += lower;
+  }
+  //check if it updated with console
+  console.log (charset);
 
 // Write password to the #password input
 function writePassword() {
