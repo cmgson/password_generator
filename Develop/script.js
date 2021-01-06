@@ -31,6 +31,14 @@ var lowerConfirm = confirm("would you like to add lower case to your password?")
 
   console.log (charset);
 
+  var numbersConfirm = confirm("how about a few numbers in there?")
+  if (numbersConfirm) {
+    alert("Dang! they aint ever gunna guess this one!");
+    charset += numbers;
+  }
+
+  console.log (charset);
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
