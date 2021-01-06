@@ -4,9 +4,13 @@ var lower = "abcdefghijklmnopqrstuvwxyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var special = "!@#$%^&*-_=+`~?\|";
+var pwlength = '';
+//initialize pwlength then set while checking validity
+while (pwlength < 8 || pwlength > 128 || isNaN (pwlength) ){
+  pwlength = prompt ("Please pick a length between 8 and 128");
+}
+alert("The length of your password will be " + pwlength + " characters long!");
 
-var pwlength = prompt("please pick a length between 8 and 128 characters");
-console.log (pwlength);
 
 // Write password to the #password input
 function writePassword() {
