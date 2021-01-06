@@ -15,12 +15,20 @@ while (pwlength < 8 || pwlength > 128 || isNaN (pwlength) ){
 }
 alert("The length of your password will be " + pwlength + " characters long!");
 // send user confirmation on lower case and add it to pw character set
-var lowerConfirm = confirm("would you like to add lower case to your password")
+var lowerConfirm = confirm("would you like to add lower case to your password?")
   if (lowerConfirm) {
     alert("no problem!");
     charset += lower;
   }
   //check if it updated with console
+  console.log (charset);
+
+  var upperConfirm = confirm("would you like to add upper case to your password?")
+  if (upperConfirm) {
+    alert("Ok! I see you!");
+    charset += upper;
+  }
+
   console.log (charset);
 
 // Write password to the #password input
