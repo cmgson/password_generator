@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var generateReset = document.querySelector("#reset");
 var lower = "abcdefghijklmnopqrstuvwxyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
@@ -64,3 +65,6 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+generateReset.addEventListener("click", function() {
+  window.parent.location.href=window.parent.location.href;
+});
