@@ -20,32 +20,27 @@ function generatePassword () {
 // send user confirmation on lower case and add it to pw character set
   var lowerConfirm = confirm("would you like to add lower case to your password?")
     if (lowerConfirm) {
-      alert("no problem!");
       charset += lower;
     }
 //confirm uppercase
     var upperConfirm = confirm("would you like to add upper case to your password?")
     if (upperConfirm) {
-      alert("Ok! I see you!");
       charset += upper;
     }
 //confirm numbers
     var numbersConfirm = confirm("how about a few numbers in there?")
     if (numbersConfirm) {
-      alert("Dang! they aint ever gunna guess this one!");
       charset += numbers;
     }
 //confirm special characters
     var specialConfirm = confirm("Dash of special characters?")
     if (specialConfirm)  {
-      alert("Oh you fancy huh?");
       charset += special;
     }
 //check to make sure the pw has parameters for creation
     if (charset === '') {
       alert('might as well make your password "password"');
       alert("lets try again shall we?  this time select at least one set of characters to use please");
-      window.parent.location = window.parent.location.href;
     } else {
       alert('abracadabra!');
     }
