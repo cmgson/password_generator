@@ -87,7 +87,7 @@ header {
   text-align: center;
   cursor: pointer;
 }
-
+/* added reset button color */
 #reset {
   background-color: green;
 }
