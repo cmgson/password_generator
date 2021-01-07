@@ -23,33 +23,25 @@ function generatePassword () {
       alert("no problem!");
       charset += lower;
     }
-  //check if it updated with console
-  console.log (charset);
 //confirm uppercase
     var upperConfirm = confirm("would you like to add upper case to your password?")
     if (upperConfirm) {
       alert("Ok! I see you!");
       charset += upper;
     }
-
-  console.log (charset);
 //confirm numbers
     var numbersConfirm = confirm("how about a few numbers in there?")
     if (numbersConfirm) {
       alert("Dang! they aint ever gunna guess this one!");
       charset += numbers;
     }
-
-  console.log (charset);
-
+//confirm special characters
     var specialConfirm = confirm("Dash of special characters?")
     if (specialConfirm)  {
       alert("Oh you fancy huh?");
       charset += special;
     }
-
-  console.log (charset);
-
+//check to make sure the pw has parameters for creation
     if (charset === '') {
       alert('might as well make your password "password"');
       alert("lets try again shall we?  this time select at least one set of characters to use please");
@@ -62,8 +54,6 @@ function generatePassword () {
       password += charset.charAt (Math.floor(Math.random()*charset.length))
     
     }
-
-  console.log(password);
   return password;
   }; 
 
