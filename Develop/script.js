@@ -4,13 +4,15 @@ var lower = "abcdefghijklmnopqrstuvwxyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var special = "!@#$%^&*-_=+`~?\|";
-var charset = "";
-var pwlength = "";
-var password = "";
+
 
 
 //initialize pwlength then set while checking validity
 function generatePassword () {
+  var pwlength = "";
+  var password = "";
+  var charset = "";
+
   while (pwlength < 8 || pwlength > 128 || isNaN (pwlength) ){
   pwlength = prompt ("Please pick a length between 8 and 128");
   }
