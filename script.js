@@ -1,4 +1,4 @@
-// Assignment Code
+// variables for buttons and sets for password parameters
 var generateBtn = document.querySelector("#generate");
 var generateReset = document.querySelector("#reset");
 var lower = "abcdefghijklmnopqrstuvwxyz";
@@ -8,17 +8,17 @@ var special = "!@#$%^&*-_=+`~?\|";
 
 
 
-//initialize pwlength then set while checking validity
+// Password generator start
 function generatePassword () {
   var pwlength = "";
   var password = "";
   var charset = "";
-
+// while loop to check pw length is within 8-128 also that it is a number
   while (pwlength < 8 || pwlength > 128 || isNaN (pwlength) ){
   pwlength = prompt ("Please pick a length between 8 and 128");
   }
   alert("The length of your password will be " + pwlength + " characters long!");
-// send user confirmation on lower case and add it to pw character set
+// confirm lower case
   var lowerConfirm = confirm("would you like to add lower case to your password?")
     if (lowerConfirm) {
       charset += lower;
@@ -45,7 +45,7 @@ function generatePassword () {
     } else {
       alert('abracadabra!');
     }
-
+//generates random password from users parameters
     for (var i = 0; i < pwlength; i++) {
       password += charset.charAt (Math.floor(Math.random()*charset.length))
     
@@ -53,7 +53,7 @@ function generatePassword () {
   return password;
   }; 
 
-// Write password to the #password input
+// runs program and updates the return to print it to the window
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -63,7 +63,7 @@ function writePassword() {
 }
 
 
-// Add event listener to generate button
+// Event listeners for buttons
 generateBtn.addEventListener("click", writePassword);
 generateReset.addEventListener("click", function() {
   window.parent.location.href=window.parent.location.href;
