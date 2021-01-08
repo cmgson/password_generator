@@ -22,7 +22,7 @@ THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 
-![final website screenshot](/readme assets/Screen Shot 2021-01-07 at 1.06.33 PM.png)
+!(/readme assets/screenShot.png)
 
 # Password Generator for bootcamp! #
 # -------------------------------- #
