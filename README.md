@@ -44,3 +44,9 @@ A few modifications I made to the style and the html was to include a second but
 
 The only issue I really ran into was the placement of the variables that needed to reset if the program was run again.  I initialized them the first time around outside of the function and I found that If ran again, the program would hang on to the last rounds variables and simply add on to them.  With a little help from Mr. Google and the online TA assistant, I was able to replace them within the write password function, so that upon rerun, they would reset to empty!
 
+## Links to Repo and Deployed Site! ##
+## -------------------------------- ##
+
+[Link to Repo](https://github.com/cmgson/password_generator)
+
+[Link to Deployed Site](https://cmgson.github.io/password_generator/)
